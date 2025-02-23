@@ -1,0 +1,81 @@
+/* Learning Platform - Purple, Blue, and White Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fc;
+    color: #6a0dad;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.header img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.header {
+    background: linear-gradient(to right, #6a0dad, #4b0082);
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.signin {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: #6a0dad;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.course {
+    background: #e6e0f8;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    width: 250px;
+    text-align: center;
+}
+
+.course img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.course:hover {
+    transform: scale(1.05);
+}
+
+.signup {
+    background: #d8bfd8;
+    padding: 40px 20px;
+}
+
+.cta {
+    background: #4b0082;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background: #6a0dad;
+    color: white;
+    padding: 20px;
+}

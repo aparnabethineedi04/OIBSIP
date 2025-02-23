@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seetha - Product Designer & Full Stack Developer based in India.">
+    <title>Portfolio - Seetha .B</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Seetha .B</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Seetha <br> B.</h1>
+                <p>Product Designer and Developer, based in India.</p>
+                <a href="#about" class="button">My Story →</a>
+            </div>
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Seetha .B profile picture">
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>With over 14 years of experience in design and development, I create stunning, user-friendly digital experiences that drive results.</p>
+            <a href="#contact" class="button">Let's Work Together</a>
+        </section>
+
+        <section class="stats">
+            <p><strong>1</strong> Year Experience</p>
+            <p><strong>10</strong> Satisfied Clients</p>
+            <p><strong>12+</strong> Projects Completed</p>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <div class="service-card active" onclick="selectService(this)">Product Designer</div>
+            <div class="service-card" onclick="selectService(this)">Branding Designer</div>
+            <div class="service-card" onclick="selectService(this)">Full Stack Developer</div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:hi@Seetha.com">hi@Seetha.com</a></p>
+            <p>Follow me: 
+                <a href="https://linkedin.com/in/Seetha" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/Seetha" target="_blank">GitHub</a> | 
+                <a href="https://twitter.com/Seetha" target="_blank">Twitter</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Seetha .B. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const serviceCards = document.querySelectorAll(".service-card");
+            
+            serviceCards.forEach(card => {
+                card.addEventListener("click", function () {
+                    serviceCards.forEach(c => c.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Auto-scroll through sections
+            let sections = document.querySelectorAll("main section");
+            let currentIndex = 0;
+
+            function autoScroll() {
+                if (currentIndex < sections.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                sections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+
+            setInterval(autoScroll, 1000); // Scrolls every 1 seconds
+        });
+    </script>
+</body>
+</html>
